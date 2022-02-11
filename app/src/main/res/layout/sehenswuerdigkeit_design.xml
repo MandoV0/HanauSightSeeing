@@ -63,7 +63,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sight_desc" />
+            android:text="@string/sight_desc"
+            android:id="@+id/sehenswürdigkeiten_name"
+            />
 
         <TextView
             android:layout_marginTop="20dp"

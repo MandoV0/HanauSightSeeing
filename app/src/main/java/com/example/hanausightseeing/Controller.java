@@ -2,11 +2,16 @@ package com.example.hanausightseeing;
 
 public class Controller {
 
-    View mainView;
+    MainActivity mainView;
     Model model;
 
-    public Controller() {
-        mainView = new View();
+    public Controller(MainActivity mainView) {
+        this.mainView = mainView;
         model = new Model();
+        start();
+    }
+
+    void start() {
+        mainView.updateSehenswürdigkeiten(model.getSehenswürdigkeiten());
     }
 }
