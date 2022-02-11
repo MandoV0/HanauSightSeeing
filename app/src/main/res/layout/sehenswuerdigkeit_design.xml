@@ -15,22 +15,18 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="res/drawable/goldi450"
-            android:adjustViewBounds="true"
+            android:layout_height="287dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/pic_desc"
-            />
+            android:scaleType="fitStart"
+            android:src="@drawable/Schloss" />
 
-        <ImageView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="res/drawable/schloss"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/pic_desc"
+            android:text="@string/sight_desc"
             />
 
     </LinearLayout>
