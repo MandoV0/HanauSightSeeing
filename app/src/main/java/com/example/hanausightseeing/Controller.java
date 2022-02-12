@@ -12,6 +12,6 @@ public class Controller {
     }
 
     void start() {
-        mainView.updateSehenswürdigkeiten(model.getSehenswürdigkeiten());
+        mainView.updateSehenswuerdigkeiten(model.getSehenswürdigkeiten());
     }
 }
