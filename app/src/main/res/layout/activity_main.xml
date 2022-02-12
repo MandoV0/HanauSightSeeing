@@ -7,31 +7,8 @@
     tools:context=".MainActivity"
     >
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylcer_sehenswuerdigkeiten"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-            android:src="@drawable/schloss"
-            android:adjustViewBounds="true"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/pic_desc"
-            />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitStart"
-
-            android:adjustViewBounds="true"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/pic_desc"
-            />
-
-    </LinearLayout>
+        android:layout_height="wrap_content" />
 </ScrollView>
