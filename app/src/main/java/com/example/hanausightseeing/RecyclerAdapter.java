@@ -1,8 +1,10 @@
 package com.example.hanausightseeing;
 
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,10 +24,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView nameText;
+        private ImageView imageView;
 
         public MyViewHolder(final View view) {
             super(view);
-            nameText = view.findViewById(R.id.textSehenswuerdigkeit);
+            nameText = view.findViewById(R.id.text_name);
+            imageView = view.findViewById(R.id.imageView);
         }
     }
 
@@ -39,7 +43,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String name = sehenswuerdigkeitenList.get(position).name;
+        int foto = sehenswuerdigkeitenList.get(position).foto;
         holder.nameText.setText(name);
+        holder.imageView.setImageResource(foto);
     }
 
     @Override

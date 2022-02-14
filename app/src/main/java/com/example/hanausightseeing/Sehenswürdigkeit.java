@@ -4,10 +4,11 @@ public class Sehenswürdigkeit {
 
     public String name;
     public String beschreibung;
-    public String[] bilder;
+    public int foto;
 
-    public Sehenswürdigkeit(String name, String beschreibung) {
+    public Sehenswürdigkeit(String name, String beschreibung, int foto) {
         this.beschreibung = beschreibung;
         this.name = name;
+        this.foto = foto;
     }
 }

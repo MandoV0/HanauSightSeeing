@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,16 +13,25 @@ public class MainActivity extends AppCompatActivity {
 
     public RecyclerView recyclerView;
 
-    public ArrayList<Sehenswürdigkeit> sehenswuerdigkeiten;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recylcer_sehenswuerdigkeiten);
+        Sehenswürdigkeit s1 = new Sehenswürdigkeit("Goldschmiede", "L", R.drawable.goldschmiede);
+        Sehenswürdigkeit s2 = new Sehenswürdigkeit("Schloss", "K", R.drawable.schloss);
+        Sehenswürdigkeit s3 = new Sehenswürdigkeit("Brüder Grimm", "Bla Bla", R.drawable.grimm);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(sehenswuerdigkeiten);
+        // Liste in der alle sehenswürdigkeiten gespeichert werden
+        ArrayList<Sehenswürdigkeit> sightList = new ArrayList<>();
+
+        sightList.add(s1);
+        sightList.add(s2);
+        sightList.add(s3);
+
+        recyclerView = findViewById(R.id.recycler_sightseeing);
+
+        RecyclerAdapter adapter = new RecyclerAdapter(sightList);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
 
@@ -32,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         recyclerView.setAdapter(adapter);
-
 
     }
 }
