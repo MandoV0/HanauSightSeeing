@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     public RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
 
-    public ArrayList<Sehenswürdigkeit> sightList = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,46 +24,36 @@ public class MainActivity extends AppCompatActivity {
         // Setze die View
         setContentView(R.layout.activity_main);
 
-        // Erstelle die Sehenswürigkeiten
-        Sehenswürdigkeit s1 = new Sehenswürdigkeit("Goldschmiede", "Die Goldschmiede wurde 1990 gebaut", R.drawable.goldschmiede);
-        Sehenswürdigkeit s2 = new Sehenswürdigkeit("Schloss", "Das Schloss der Märchen", R.drawable.schloss);
-        Sehenswürdigkeit s3 = new Sehenswürdigkeit("Brüder Grimm", "Bla Bla", R.drawable.grimm);
+        // ! --- Sollte im Controller passieren!!!
+        // Erstelle das Model
+        Model model = new Model();
 
-        // Füge die Sehenswüridgkeiten in die Liste ein
-        sightList.add(s1);
-        sightList.add(s2);
-        sightList.add(s3);
-
-        // Erstelle den Recycler für die Hauptseite
         recyclerView = findViewById(R.id.recycler_sightseeing);
         setOnClickListener();
-        recyclerAdapter = new RecyclerAdapter(sightList, listener);
-
+        // Erstelle Recycler Adapter
+        recyclerAdapter = new RecyclerAdapter(model.getSehenswürdigkeiten(), listener);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-
         recyclerView.setLayoutManager(layoutManager);
-
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
         recyclerView.setAdapter(recyclerAdapter);
     }
 
     void setOnClickListener() {
-        listener = new RecyclerAdapter.RecyclerViewClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                // Lade neue Aktivität bzw VIEW
-                String beschreibung = recyclerAdapter.getSehenswuerdigkeitenList().get(position).beschreibung;
-                String name = recyclerAdapter.getSehenswuerdigkeitenList().get(position).name;
-                int[] fotos = recyclerAdapter.getSehenswuerdigkeitenList().get(position).fotos;
-                Intent intent = new Intent(getApplicationContext(), ViewHauptseiteActivity.class);
+        listener = (view, position) -> {
+            // Lade neue Aktivität bzw VIEW
 
-                intent.putExtra("BESCHREIBUNG", beschreibung);
-                intent.putExtra("NAME", name);
-                intent.putExtra("FOTOS", fotos);
+            // Informationen der Sehenswürdigkeit auf die geclickt wurde
+            String beschreibung = recyclerAdapter.getSehenswuerdigkeitenList().get(position).beschreibung;
+            String name = recyclerAdapter.getSehenswuerdigkeitenList().get(position).name;
+            int[] fotos = recyclerAdapter.getSehenswuerdigkeitenList().get(position).fotos;
 
-                startActivity(intent);
-            }
+            Intent intent = new Intent(getApplicationContext(), ViewHauptseiteActivity.class);
+
+            intent.putExtra("BESCHREIBUNG", beschreibung);
+            intent.putExtra("NAME", name);
+            intent.putExtra("FOTOS", fotos);
+
+            startActivity(intent);
         };
     }
 }

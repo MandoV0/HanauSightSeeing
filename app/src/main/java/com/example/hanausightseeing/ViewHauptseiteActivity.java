@@ -14,8 +14,10 @@ public class ViewHauptseiteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sehenswuerdigkeit_design);
 
+        // Die vorherige Aktivität
         Intent intent = getIntent();
 
+        // Alle Daten die dieser Aktivität übergeben werden
         TextView textName = findViewById(R.id.sehenswürdigkeiten_name);
         String name = intent.getStringExtra("NAME");
         textName.setText(name);
