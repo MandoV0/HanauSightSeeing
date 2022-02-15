@@ -57,11 +57,12 @@ public class MainActivity extends AppCompatActivity {
                 // Lade neue Aktivität bzw VIEW
                 String beschreibung = recyclerAdapter.getSehenswuerdigkeitenList().get(position).beschreibung;
                 String name = recyclerAdapter.getSehenswuerdigkeitenList().get(position).name;
-
+                int[] fotos = recyclerAdapter.getSehenswuerdigkeitenList().get(position).fotos;
                 Intent intent = new Intent(getApplicationContext(), ViewHauptseiteActivity.class);
 
                 intent.putExtra("BESCHREIBUNG", beschreibung);
                 intent.putExtra("NAME", name);
+                intent.putExtra("FOTOS", fotos);
 
                 startActivity(intent);
             }

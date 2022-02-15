@@ -17,25 +17,27 @@ import java.util.ArrayList;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
+    // Liste aller Sehenswürdigkeiten
     private ArrayList<Sehenswürdigkeit> sehenswuerdigkeitenList;
     private RecyclerViewClickListener listener;
 
+    // Erstelle den Recycler Adapter
     public RecyclerAdapter(ArrayList<Sehenswürdigkeit> sehenswuerdigkeitenList, RecyclerViewClickListener listener) {
         this.sehenswuerdigkeitenList = sehenswuerdigkeitenList;
         this.listener = listener;
     }
 
+    // Erstelle die einzelne View ( Recycler View )
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView nameText;
         private ImageView imageView;
-        private Button button;
 
         public MyViewHolder(final View view) {
             super(view);
             nameText = view.findViewById(R.id.text_name);
             imageView = view.findViewById(R.id.imageView);
-            button = view.findViewById(R.id.button);
+
             view.setOnClickListener(this);
         }
 
@@ -55,7 +57,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder holder, int position) {
         String name = sehenswuerdigkeitenList.get(position).name;
-        int fId = sehenswuerdigkeitenList.get(position).foto;
+        int fId = sehenswuerdigkeitenList.get(position).fotos[0];
         holder.nameText.setText(name);
         holder.imageView.setImageResource(fId);
     }

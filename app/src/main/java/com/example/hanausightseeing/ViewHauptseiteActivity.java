@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ViewHauptseiteActivity extends AppCompatActivity {
@@ -22,5 +23,9 @@ public class ViewHauptseiteActivity extends AppCompatActivity {
         TextView textBeschreibung = findViewById(R.id.sehenswürdigkeiten_beschreibung);
         String beschreibung = intent.getStringExtra("BESCHREIBUNG");
         textBeschreibung.setText(beschreibung);
+
+        int[] fotos = intent.getIntArrayExtra("FOTOS");
+        ImageView bild = findViewById(R.id.erstestFoto);
+        bild.setImageResource(fotos[0]);
     }
 }
