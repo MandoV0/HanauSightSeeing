@@ -7,9 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,12 +21,13 @@ public class MainActivity extends AppCompatActivity {
         // Setze die View
         setContentView(R.layout.activity_main);
 
-        // ! --- Sollte im Controller passieren!!!
-        // Erstelle das Model
+        // ! --- Sollte im Controller passieren --- !
+        // Erstelle das Model ( Die Logik )
         Model model = new Model();
 
         recyclerView = findViewById(R.id.recycler_sightseeing);
         setOnClickListener();
+
         // Erstelle Recycler Adapter
         recyclerAdapter = new RecyclerAdapter(model.getSehenswürdigkeiten(), listener);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -40,19 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
     void setOnClickListener() {
         listener = (view, position) -> {
-            // Lade neue Aktivität bzw VIEW
-
-            // Informationen der Sehenswürdigkeit auf die geclickt wurde
+            // Informationen der Sehenswürdigkeit auf die geclickt wurde bekommen
             String beschreibung = recyclerAdapter.getSehenswuerdigkeitenList().get(position).beschreibung;
             String name = recyclerAdapter.getSehenswuerdigkeitenList().get(position).name;
             int[] fotos = recyclerAdapter.getSehenswuerdigkeitenList().get(position).fotos;
 
+            // Lade neue Aktivität bzw VIEW
             Intent intent = new Intent(getApplicationContext(), ViewHauptseiteActivity.class);
 
+            // Informationen der neuen Aktivität geben
             intent.putExtra("BESCHREIBUNG", beschreibung);
             intent.putExtra("NAME", name);
             intent.putExtra("FOTOS", fotos);
 
+            // Aktivität starten
             startActivity(intent);
         };
     }
