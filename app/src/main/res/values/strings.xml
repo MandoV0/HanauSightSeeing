@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HanauSightSeeing</string>
     <string name="pic_desc">Bla bla bla</string>
-    <string name="sight_desc">Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
+    <string name="test_text">Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
         Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
         Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
         Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
@@ -10,4 +10,5 @@
         Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.Hallo das ist ein Test.
         Hallo das ist ein Test.Hallo das ist ein Test.
     </string>
+    <string name="test_name">Das ist ein Test</string>
 </resources>
