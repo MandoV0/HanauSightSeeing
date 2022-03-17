@@ -1,17 +1,16 @@
-package com.example.hanausightseeing;
+package com.example.hanausightseeing.adapters;
 
-import android.content.Intent;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.hanausightseeing.R;
+import com.example.hanausightseeing.Sehenswürdigkeit;
 
 import java.util.ArrayList;
 
@@ -74,5 +73,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     public ArrayList<Sehenswürdigkeit> getSehenswuerdigkeitenList() {
         return sehenswuerdigkeitenList;
+    }
+
+    public void filterdList(ArrayList<Sehenswürdigkeit> f) {
+        sehenswuerdigkeitenList = f;
+        notifyDataSetChanged();
     }
 }

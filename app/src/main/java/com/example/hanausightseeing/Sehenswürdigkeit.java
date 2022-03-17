@@ -1,6 +1,8 @@
 package com.example.hanausightseeing;
 
-public class Sehenswürdigkeit {
+import java.io.Serializable;
+
+public class Sehenswürdigkeit implements Serializable {
 
     public String name;
     public String beschreibung;
