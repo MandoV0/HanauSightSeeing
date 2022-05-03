@@ -44,5 +44,15 @@
             android:id="@+id/sehenswürdigkeiten_beschreibung"
             android:text="@string/test_text"
             />
+
+        <TextView
+            android:id="@+id/sehenswürdigkeiten_mapLinkTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:autoLink="web"
+            android:text="LINK HERE" />
     </LinearLayout>
 </ScrollView>

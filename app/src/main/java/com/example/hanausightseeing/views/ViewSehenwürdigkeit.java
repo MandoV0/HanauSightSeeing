@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hanausightseeing.R;
@@ -31,5 +33,23 @@ public class ViewSehenwürdigkeit extends AppCompatActivity {
 
         TextView textBeschreibung = findViewById(R.id.sehenswürdigkeiten_beschreibung);
         textBeschreibung.setText(s.beschreibung);
+
+        ImageView imageView = findViewById(R.id.sehenswürdigkeiten_foto);
+        imageView.setImageResource(s.fotos[0]);
+
+        TextView mapLinkTextView = findViewById(R.id.sehenswürdigkeiten_mapLinkTextView);
+
+        if(s.mapLink != "")
+        {
+            mapLinkTextView.setText(s.mapLink);
+            mapLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        {
+
+            mapLinkTextView.setText("");
+        }
+
+
     }
 }
