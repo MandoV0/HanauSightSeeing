@@ -26,7 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         this.listener = listener;
     }
 
-    // Erstelle die einzelne View ( Recycler View im main menu)
+    // Erstelle die einzelne View ( Recycler View im main menu )
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView nameText;
@@ -75,6 +75,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return sehenswuerdigkeitenList;
     }
 
+    /**
+     * Setzt die Sehenswüridgkeitenliste um in die Liste f
+     * @param f Die Liste mit den Sehenswürdigkeiten die gesucht werden
+     */
     public void filterdList(ArrayList<Sehenswürdigkeit> f) {
         sehenswuerdigkeitenList = f;
         notifyDataSetChanged();
