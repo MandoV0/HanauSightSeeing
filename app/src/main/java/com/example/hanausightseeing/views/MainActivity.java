@@ -12,7 +12,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import com.example.hanausightseeing.controllers.Controller;
 import com.example.hanausightseeing.models.Model;
 import com.example.hanausightseeing.R;
 import com.example.hanausightseeing.adapters.RecyclerAdapter;
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Erstelle das Model ( Die Logik )
         model = new Model();
 
+        // Für die Suche
         EditText editText = findViewById(R.id.main_edittext);
         editText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Setzt ein Knopf der hört ob auf diese Sehenswürdigkeit gecklickt wurde
+     * Erstellt einen Knopf auf der Sehenswürdigkeit der schaut ob auf diese Sehenswürdigkeit gecklickt wurde
      */
     void setOnClickListener() {
         listener = (view, position) -> {

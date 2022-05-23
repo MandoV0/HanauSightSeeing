@@ -23,8 +23,6 @@
 
             ></ImageView>
 
-
-
         <TextView
             android:id="@+id/sehenswürdigkeiten_name"
             android:layout_width="match_parent"

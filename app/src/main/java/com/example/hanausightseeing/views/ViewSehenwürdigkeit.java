@@ -39,14 +39,11 @@ public class ViewSehenwürdigkeit extends AppCompatActivity {
 
         TextView mapLinkTextView = findViewById(R.id.sehenswürdigkeiten_mapLinkTextView);
 
-        if(s.mapLink != "")
-        {
+        if(s.mapLink != "") {
             mapLinkTextView.setText(s.mapLink);
             mapLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         }
-        else
-        {
-
+        else {
             mapLinkTextView.setText("");
         }
 

@@ -1,0 +1,9 @@
+{
+  "Sehenswürdigkeiten" : [{
+    "Name":"value1",
+    "Beschreibung":"value2"
+  }, {
+    "Name":"value3",
+    "Beschreibung":"value4"
+  }]
+}

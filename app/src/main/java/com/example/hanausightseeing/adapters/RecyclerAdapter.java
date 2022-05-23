@@ -26,7 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         this.listener = listener;
     }
 
-    // Erstelle die einzelne View ( Recycler View )
+    // Erstelle die einzelne View ( Recycler View im main menu)
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView nameText;
