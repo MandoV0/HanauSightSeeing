@@ -18,7 +18,6 @@ import com.example.hanausightseeing.adapters.RecyclerAdapter;
 import com.example.hanausightseeing.Sehenswürdigkeit;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
