@@ -8,3 +8,5 @@ If you click on a Sightseeings we Create a new View from the Activity ViewSehens
 The Data for the Sightseeings gets passed to ViewSehenswürdigkeit which then sets alls Pictures, Descriptions and so on.
 
 All the Pictures for the Sightseeings are saved in res/drawable
+
+Classdiagramm is in com/example/hanausightseeing
