@@ -20,7 +20,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     private ArrayList<Sehenswürdigkeit> sehenswuerdigkeitenList;
     private RecyclerViewClickListener listener;
 
-    // Erstelle den Recycler Adapter
+    /**
+        Erstelle den Recycler Adapter
+     */
     public RecyclerAdapter(ArrayList<Sehenswürdigkeit> sehenswuerdigkeitenList, RecyclerViewClickListener listener) {
         this.sehenswuerdigkeitenList = sehenswuerdigkeitenList;
         this.listener = listener;
