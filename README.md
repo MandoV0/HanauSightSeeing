@@ -12,6 +12,8 @@ All the Pictures for the Sightseeings are saved in res/drawable
 Classdiagramm is in com/example/hanausightseeing
 
 Pictures:
+
+
 ![grafik](https://user-images.githubusercontent.com/99393791/170226034-2082c8ce-787b-4c82-95a7-f40cbe203069.png)
 
 ![grafik](https://user-images.githubusercontent.com/99393791/170226190-1af85f94-7f69-4e30-9124-55309be5aba8.png)
