@@ -24,7 +24,7 @@ public class ViewSehenwürdigkeit extends AppCompatActivity {
         // Die vorherige Aktivität
         Intent intent = getIntent();
 
-        // Sehenswürdigkeit die uns übergeben wird
+        // Sehenswuerdigkeit die uns übergeben wurde
         Sehenswürdigkeit s = (Sehenswürdigkeit) intent.getSerializableExtra("Sehenswürdigkeit");
 
         // Setze alle daten
@@ -39,7 +39,7 @@ public class ViewSehenwürdigkeit extends AppCompatActivity {
 
         TextView mapLinkTextView = findViewById(R.id.sehenswürdigkeiten_mapLinkTextView);
 
-        if(s.mapLink != "") {
+        if(!s.mapLink.equals("")) {
             mapLinkTextView.setText(s.mapLink);
             mapLinkTextView.setMovementMethod(LinkMovementMethod.getInstance());
         }
