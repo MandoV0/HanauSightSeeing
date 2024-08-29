@@ -1,5 +1,5 @@
 # HanauSightSeeing
-Hanau Projekt 2022
+School Project.
 
 Project start trough Main Activity in which the Model ( Which contains all Sightseeings (Object: Sehenswürdigkeit) ) 
 and the Recycler View ( creates all the Views for the sightseeings and handles the buttons presses (Layout: item_sehenswürdigkeit)) are created.
